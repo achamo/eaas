@@ -1,0 +1,38 @@
+<div>
+  <% if flash[:message] %>
+    <p><%= flash[:message] %></p>
+  <% elsif flash[:error] %>
+    <p><%= flash[:error] %></p>
+  <% end %>
+  <h2>General status</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Telnet port</td>
+        <td>Link port</td>
+        <td>FTP port</td>
+        <td>Status</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @eggdrop.docker_id %></td>
+        <td><%= @eggdrop.port_users %></td>
+        <td><%= @eggdrop.port_bots %></td>
+        <td><%= @eggdrop.port_ftp %></td>
+        <td><%= eggdrop_status(@eggdrop.status) %></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= form_tag eggdrop_order_path(@eggdrop) do %>
+    <%= submit_tag 'Restart', name: 'order', value: 'restart' %>
+    <%= submit_tag 'Stop', name: 'order', value: 'stop' %>
+    <%= submit_tag 'Start', name: 'order', value: 'start' %>
+  <% end %>
+  <h2>Logs</h2>
+  <h3>Standard output</h3>
+  <div><pre class="well"><%= @stdout %></pre></div>
+  <h3>Error output</h3>
+  <div><pre class="well"><%= @stderr %></pre></div>
+</div>

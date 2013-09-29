@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  eggdrop_id: 1
+  data: MyText
+
+two:
+  eggdrop_id: 1
+  data: MyText

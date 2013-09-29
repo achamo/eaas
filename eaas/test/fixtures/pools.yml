@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  port_users: 1
+  port_bots: 1
+  port_ftp: 1
+
+two:
+  port_users: 1
+  port_bots: 1
+  port_ftp: 1

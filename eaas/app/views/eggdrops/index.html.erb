@@ -1,0 +1,8 @@
+<div>
+  <% if @eggdrop %>
+    <p>You have an eggdrop, congratulation!</p>
+    <p><%= link_to 'View it', eggdrop_path(@eggdrop) %></p>
+  <% else %>
+    <p><%= link_to 'Create an eggdrop', new_eggdrop_path %></p>
+  <% end %>
+</div>

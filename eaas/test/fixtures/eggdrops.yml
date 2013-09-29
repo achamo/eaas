@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  password: MyString
+  docker_id: MyString
+
+two:
+  user_id: 1
+  password: MyString
+  docker_id: MyString

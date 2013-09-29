@@ -1,0 +1,14 @@
+<div>
+  <% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+  <% end %>
+  <%= semantic_form_for @eggdrop do |f| %>
+    <%= f.inputs :name => "Choose a password" do %>
+      <%= f.input :password, required: true %>
+      <%= f.input :password_confirmation, required: true %>
+    <% end %>
+    <%= f.actions do %>
+      <%= f.action :submit, value: 'Create !' %>
+    <% end %>
+  <% end %>
+</div>
